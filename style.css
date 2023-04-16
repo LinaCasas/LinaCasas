@@ -24,7 +24,9 @@ body, html {
   padding: 1em 4em;
   background-color: var(--color-third);
   color: var(--color-primary);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px ;
+  text-transform: uppercase;
 }
 
 .social-header > a {
@@ -40,6 +42,7 @@ body, html {
 .social-header > a > i {
   font-size: 24px;
   padding-right: .5em;
+ ;
 }
 
 /*  MAIN  */
@@ -186,6 +189,7 @@ body, html {
 .skills-tools > .skills {
   background: white;
   position: relative;
+  left: 60px;
   padding: 1em 2em;
   border: 1px dashed var(--color-primary);
   border-radius: 10px;
@@ -212,8 +216,9 @@ body, html {
 .skills-tools > .skills > h3 {
   margin: 0;
   text-transform: uppercase;
-  color: var(--text-color);
-  font-size: 2rem;
+  color: var(cl);
+  font-size: 2.5rem;
+  
 }
 
 .skills-tools > .skills ul {
@@ -229,6 +234,7 @@ body, html {
 
 .skills {
   position: relative;
+  right:  100px;
 }
 
 .skills i.las {
@@ -248,17 +254,22 @@ body, html {
 }
 
 .education-list {
+  position: relative;
+  left: 60px;
   font-size: 1.6rem;
-  margin-top: 1em;
-  padding: 1em;
+  margin-top: 1.5em;
+  padding: 2.5em;
   background-color: var(--color-secondary);
+  border-radius: 15px;
+  
+  
 }
 
 .education-list > h3 {
   font-size: 2.5em;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 0 0 .5em;
+  margin:  0 .5em;
 }
 
 .education-list > .education-item {
@@ -269,22 +280,138 @@ body, html {
 }
 
 .education-list > .education-item > .date {
+
   color: var(--text-color);
-  font-weight: 900;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  
 }
 
 .education-list > .education-item > .item-description {
   font-size: 1.8rem;
-  font-weight: 100;
+  font-weight: 90;
 }
 
 .education-list > .education-item > .item-description > span {
-  font-size: 2rem;
-  color: white;
-  font-weight: 900;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 2px;
+  
 }
 
 .item-divider {
-  border: 1px solid rgba(170, 131, 48, .3);
+  border: 1px solid rgba(255, 187, 40, 0.3);
+}
+
+.experience-title > h3 {
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 1em;
+  color: var(--text-color);
+ 
+}
+
+.experience-list{
+  width: 100em;
+  padding: 3em ;
+  border: 1.5px dashed var(--text-color);
+  position: relative;
+  top: -5px;
+  left: 200px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  margin-top: 1em;
+  border-radius: 15px;
+}
+
+.experience-list i.las{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  font-weight: 100;
+  background-color: var(--text-color);
+  color: white;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+  right: -20px;
+  border-radius: 50%;
+}
+
+.experience-company{
+  font-size: 1em;
+  letter-spacing: 2px;
+  margin:  0.5em;
+}
+
+.experience-description{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.experience-date{
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white; 
+}
+.experience{
+  position: relative;
+}
+
+.experience-container2{
+  width: 25em;
+  position: relative;
+  bottom: 10px;
+  left: -20px;
+  font-size: 1.6rem;
+  margin-top: 1em;
+  padding: 2em;
+  background-color: var(--color-primary);
+  border-radius: 15px;
+
+}
+
+.tools-list{
+  width: 35em;
+  position: relative;
+  bottom: 300px;
+  right: 500px;
+  font-size: 1rem;
+  margin-top: 1em;
+  padding: 2em;
+  background-color: var(--color-third);
+  border-radius: 15px;
+  color: white;
+  font-weight: 100;
+}
+
+.tool-title > h3 {
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 1em;
+  color: var(--color-secondary);
+}
+
+.tool-categories > h4 {
+  color: var(--text-color);
+  position: absolute;
+  font-size: 1.2rem;
+  right: 0;
+  transform: rotate(-90deg);
+  top:  150px;
+  letter-spacing: 2px;
+
+}
+
+.tools-list i.lab {
+  background-color: var(white);
+  
+  
+
 }
