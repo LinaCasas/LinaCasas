@@ -1,9 +1,9 @@
 :root{
-  --color-primary: #DB9600;
+  --color-primary: #ffa500;
   --color-primary-dark: #ab8430;
   --color-secondary: #FEEE00;
   --color-third: #2b2b2b;
-  --text-color: #DB9600;
+  --text-color: #ffa500;
   --bg-color: bisque;
   --max-width: 1000px;
 }
@@ -14,11 +14,11 @@ body, html {
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
   background-color: var(--bg-color);
-  padding-bottom: 2em;
+ 
 }
 
 /* SOCIAL HEADER */
-.social-header {
+.social-header, .footer {
   display: flex;
   justify-content: space-around;
   padding: 1em 4em;
@@ -175,8 +175,10 @@ body, html {
 
 .content {
   display: flex;
-  justify-content: center;
-  gap: 1em;
+  justify-content: space-evenly;
+  gap: 2.5em;
+  max-width: var(--max-width);
+  margin: auto;
 }
 
 .content > div {
@@ -189,13 +191,10 @@ body, html {
 .skills-tools > .skills {
   background: white;
   position: relative;
-  left: 60px;
   padding: 1em 2em;
   border: 1px dashed var(--color-primary);
   border-radius: 10px;
-  width: 200px;
   font-size: 1.4rem;
-  align-self: flex-end;
 }
 
 .education > .values {
@@ -216,7 +215,7 @@ body, html {
 .skills-tools > .skills > h3 {
   margin: 0;
   text-transform: uppercase;
-  color: var(cl);
+  color: var(--color-primary);
   font-size: 2.5rem;
   
 }
@@ -232,16 +231,17 @@ body, html {
   padding-bottom: .2em;
 }
 
-.skills {
-  position: relative;
-  right:  100px;
+.skills > ul > li {
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: .1em;
 }
 
-.skills i.las {
+.skills i.las,
+.experience-list > i.las {
   position: absolute;
   width: 80px;
   height: 80px;
-  font-weight: 100;
   background-color: var(--color-primary);
   color: white;
   font-size: 64px;
@@ -253,28 +253,31 @@ body, html {
   border-radius: 50%;
 }
 
+.experience-list > i.las {
+  right: -40px;
+  font-size: 5rem;
+}
+
 .education-list {
   position: relative;
-  left: 60px;
   font-size: 1.6rem;
   margin-top: 1.5em;
   padding: 2.5em;
   background-color: var(--color-secondary);
   border-radius: 15px;
-  
-  
 }
 
 .education-list > h3 {
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin:  0 .5em;
+  margin-bottom: 3rem;
 }
 
 .education-list > .education-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1em;
   margin-bottom: 1em;
 }
@@ -290,6 +293,7 @@ body, html {
 .education-list > .education-item > .item-description {
   font-size: 1.8rem;
   font-weight: 90;
+  text-align: right;
 }
 
 .education-list > .education-item > .item-description > span {
@@ -301,51 +305,37 @@ body, html {
 }
 
 .item-divider {
-  border: 1px solid rgba(255, 187, 40, 0.3);
+  border: 1px solid rgba(255, 187, 40, 0.7);
 }
 
 .experience-title > h3 {
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 1em;
   color: var(--text-color);
- 
+  margin: 1rem 0; 
 }
 
 .experience-list{
-  width: 100em;
-  padding: 3em ;
+  padding: 1em ;
   border: 1.5px dashed var(--text-color);
   position: relative;
-  top: -5px;
-  left: 200px;
   border-radius: 10px;
   font-size: 1.6rem;
-  margin-top: 1em;
   border-radius: 15px;
-}
-
-.experience-list i.las{
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  font-weight: 100;
-  background-color: var(--text-color);
-  color: white;
-  font-size: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 30px;
-  right: -20px;
-  border-radius: 50%;
 }
 
 .experience-company{
   font-size: 1em;
   letter-spacing: 2px;
-  margin:  0.5em;
+}
+
+.experience-company__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+  color: white;
 }
 
 .experience-description{
@@ -353,7 +343,7 @@ body, html {
   font-weight: 400;
 }
 
-.experience-date{
+.experience-company__label-date{
   font-size: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -364,23 +354,48 @@ body, html {
 }
 
 .experience-container2{
-  width: 25em;
   position: relative;
-  bottom: 10px;
-  left: -20px;
   font-size: 1.6rem;
   margin-top: 1em;
-  padding: 2em;
-  background-color: var(--color-primary);
+  padding: 1em;
+  background-color: var(--color-secondary);
   border-radius: 15px;
 
 }
+.experience-date{
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary); 
+}
+  
+.experience-comtainer3{
+    position: relative;
+    font-size: 1.6rem;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.experience-comtainer4 {
+  position: relative;
+  font-size: 1.6rem;
+  margin-top: 1em;
+  padding: 1em;
+  background-color: var(--color-primary);
+  border-radius: 15px;
+}
+.experience-date-4{
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+
+}
+
 
 .tools-list{
-  width: 35em;
   position: relative;
-  bottom: 300px;
-  right: 500px;
   font-size: 1rem;
   margin-top: 1em;
   padding: 2em;
@@ -390,28 +405,171 @@ body, html {
   font-weight: 100;
 }
 
+.tool-title {
+  display: flex;
+  align-items: center;
+}
+
 .tool-title > h3 {
-  font-size: 2.5em;
+  font-size: 2.51em;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 1em;
+  margin: .5em 0 0;
   color: var(--color-secondary);
 }
 
-.tool-categories > h4 {
-  color: var(--text-color);
-  position: absolute;
-  font-size: 1.2rem;
-  right: 0;
-  transform: rotate(-90deg);
-  top:  150px;
-  letter-spacing: 2px;
-
+.tool-title-icon,
+.tools-categories-icon {
+  background: var(--color-primary);
+  font-size: 2rem;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tools-list i.lab {
-  background-color: var(white);
-  
-  
+.tool-title-icon {
+  position: absolute;
+  top: 25px;
+  right: -40px;
+}
 
+.tools-categories-icon {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.tools-categories-icon {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+}
+
+.tools-category-item {
+  display: flex;
+  align-items: stretch;
+  align-self: flex-end;
+}
+
+.tools-category-item > span {
+  transform: rotateZ(-90deg);
+  margin: 0.2em;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  font-weight: 900;
+}
+
+.tool-categories-item {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.graphic-tool {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 3em 0 2em;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool-item > p {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: .2em;
+}
+
+.tool-item > i.las, .tool-item > i.lab {
+  color: var(--color-primary);
+  font-size: 1.6em;
+}
+
+.tool-item-uxdesign{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool-item-uxdesign > p {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: .2em;
+}
+
+.tool-item-uxdesign >i.las,.tool-item-uxdesign > i.lab{
+  color: var(--color-primary);
+  font-size: 1.6em;
+}
+.uxdesign-tool{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 3em 0 2em;
+}
+.tool-item-programing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tool-item-programing > p {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: .2em;
+}
+.tool-item-programing>i.las,.tool-item-programing > i.lab {
+  color: var(--color-primary);
+  font-size: 1.6em;
+}
+.programing-tool{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 3em 0 2em;
+}
+.tool-item-other{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tool-item-other > p { 
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: .2em;
+  text-align: center;
+}
+.tool-item-other > i.las, .tool-item-other > i.lab {
+  color: var(--color-primary);
+  font-size: 1.6em;
+}
+.other-tool{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 3em 0 2em;
+}
+.Personal-project{
+  position: relative;
+  font-size: 1.6rem;
+  margin-top: 1em;
+  padding: 1em;
+  background-color: var(--color-primary);
+  border-radius: 15px;
+}
+.footer{
+  margin-top: 4em;
+  margin-bottom: 0;
 }
