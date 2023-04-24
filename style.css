@@ -340,7 +340,7 @@ body, html {
 
 .experience-description{
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .experience-company__label-date{
@@ -566,10 +566,23 @@ body, html {
   font-size: 1.6rem;
   margin-top: 1em;
   padding: 1em;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   border-radius: 15px;
+}
+.description-project{
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.personal-project-title{
+  font-size: 1em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: .5em 0 0;
+  color: var(--text-color);
+  
 }
 .footer{
   margin-top: 4em;
   margin-bottom: 0;
 }
+
